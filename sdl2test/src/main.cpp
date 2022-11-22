@@ -1,8 +1,10 @@
 #define SDL_MAIN_HANDLED
 
-#include "SDL.h"
 #include <iostream>
-#include "includehead/add.h"
+
+#include "SDL.h"
+
+#include "add.h"
 
 int main()
 {
@@ -33,6 +35,8 @@ int main()
     }
 
     SDL_UpdateWindowSurface(window);
+
+    std::cout << adder::add(5, 6) << std::endl;
 
     SDL_Delay(5000);
 }
