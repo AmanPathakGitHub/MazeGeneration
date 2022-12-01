@@ -1,0 +1,11 @@
+#pragma once
+
+#define WINDOW_WIDTH 1000
+#define WINDOW_HEIGHT 800
+
+#define CELL_WIDTH 25
+#define ROWS (WINDOW_HEIGHT / CELL_WIDTH)
+#define COLS (WINDOW_WIDTH / CELL_WIDTH)
+
+#define GRID_SIZE ROWS * COLS
+
