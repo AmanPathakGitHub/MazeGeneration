@@ -26,8 +26,9 @@ int main()
                                           SDL_WINDOWPOS_CENTERED,
                                           WINDOW_WIDTH, WINDOW_HEIGHT,
                                           0);
-    //change 1
-       
+
+    //new branch
+
     if(!window)
     {
         std::cout << "Failed to create window\n";
