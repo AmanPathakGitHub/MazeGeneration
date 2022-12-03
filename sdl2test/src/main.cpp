@@ -11,8 +11,6 @@
 
 #include "global.h"
 
-//typedef std::array<Cell, GRID_SIZE> Grid;
-
 int main()
 {
     srand(time(NULL));
@@ -30,12 +28,13 @@ int main()
                                           0);
 
 
-       
     if(!window)
     {
         std::cout << "Failed to create window\n";
         return -1;
     }
+
+    // change test 34u320
 
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
    
@@ -43,7 +42,7 @@ int main()
     bool gameRunning = true;
     
     Grid grid;
-    grid.SetCurrent(grid[grid.index(COLS - 1, 23)]);
+    grid.SetCurrent(grid[grid.index(0, 0)]);
 
     std::vector<std::shared_ptr<Cell>> stack;
 
@@ -89,7 +88,6 @@ int main()
         }
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderPresent(renderer);
-        //SDL_Delay(100);
     }
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
