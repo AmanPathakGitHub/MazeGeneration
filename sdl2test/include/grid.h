@@ -9,6 +9,7 @@
 #include "global.h"
 #include "cell.h"
 
+// creating faster version
 class Grid
 {
 public:
