@@ -34,6 +34,8 @@ int main()
         return -1;
     }
 
+    // change 334040
+
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
    
     SDL_Event eventType;
