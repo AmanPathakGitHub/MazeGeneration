@@ -27,7 +27,6 @@ int main()
                                           WINDOW_WIDTH, WINDOW_HEIGHT,
                                           0);
 
-    //new branch
 
     if(!window)
     {
