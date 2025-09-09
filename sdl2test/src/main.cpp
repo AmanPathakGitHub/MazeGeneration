@@ -1,4 +1,3 @@
-#define SDL_MAIN_HANDLED
 
 #include "SDL.h"
 
@@ -11,7 +10,7 @@
 
 #include "global.h"
 
-int main()
+int SDL_main(int argc, char *argv[])
 {
     srand(time(NULL));
 
@@ -45,6 +44,8 @@ int main()
     grid.SetCurrent(grid[grid.index(0, 0)]);
 
     std::vector<std::shared_ptr<Cell>> stack;
+    
+    std::cout << "Game running" << std::endl;
 
     while (gameRunning)
     {
@@ -54,6 +55,12 @@ int main()
         {
             if (eventType.type == SDL_QUIT)
                 gameRunning = false;
+            else if(eventType.type == SDL_KEYDOWN)
+            {
+                grid = Grid();
+                grid.SetCurrent(grid[grid.index(0, 0)]);
+                stack.clear();
+            }
         }
 
         //rendering

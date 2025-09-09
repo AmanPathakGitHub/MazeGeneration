@@ -1,7 +1,7 @@
 #pragma once
 
-#define WINDOW_WIDTH 1000
-#define WINDOW_HEIGHT 800
+#define WINDOW_WIDTH 800
+#define WINDOW_HEIGHT 400
 
 #define CELL_WIDTH 25
 #define ROWS (WINDOW_HEIGHT / CELL_WIDTH)

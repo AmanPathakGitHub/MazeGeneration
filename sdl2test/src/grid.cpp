@@ -54,10 +54,10 @@ std::shared_ptr<Cell> Grid::checkNeighbors(const std::shared_ptr<Cell>& cell)
 {
 	std::vector<std::shared_ptr<Cell>> neighbours;
 
-	std::shared_ptr<Cell>& top =   Get(this->index((cell->cellData.x / CELL_WIDTH), (cell->cellData.y / CELL_WIDTH) - 1));
-	std::shared_ptr<Cell>& left =   Get(this->index((cell->cellData.x / CELL_WIDTH) - 1, (cell->cellData.y / CELL_WIDTH)));
-	std::shared_ptr<Cell>& bottom = Get(this->index((cell->cellData.x / CELL_WIDTH), (cell->cellData.y / CELL_WIDTH) + 1));
-	std::shared_ptr<Cell>& right =  Get(this->index((cell->cellData.x / CELL_WIDTH) + 1, (cell->cellData.y / CELL_WIDTH)));
+	std::shared_ptr<Cell> top =   Get(this->index((cell->cellData.x / CELL_WIDTH), (cell->cellData.y / CELL_WIDTH) - 1));
+	std::shared_ptr<Cell> left =   Get(this->index((cell->cellData.x / CELL_WIDTH) - 1, (cell->cellData.y / CELL_WIDTH)));
+	std::shared_ptr<Cell> bottom = Get(this->index((cell->cellData.x / CELL_WIDTH), (cell->cellData.y / CELL_WIDTH) + 1));
+	std::shared_ptr<Cell> right =  Get(this->index((cell->cellData.x / CELL_WIDTH) + 1, (cell->cellData.y / CELL_WIDTH)));
 
 	if (top.get() != nullptr && !top->visited) neighbours.push_back(top);
 	if (left.get() != nullptr && !left->visited) neighbours.push_back(left);
@@ -74,7 +74,7 @@ std::shared_ptr<Cell> Grid::checkNeighbors(const std::shared_ptr<Cell>& cell)
 
 }
 
-std::shared_ptr<Cell>& Grid::Get(int16_t index)
+std::shared_ptr<Cell> Grid::Get(int16_t index)
 {
 
 	if (index < 0)
@@ -84,7 +84,7 @@ std::shared_ptr<Cell>& Grid::Get(int16_t index)
 }
 
 
-std::shared_ptr<Cell>& Grid::operator[](uint16_t index)
+std::shared_ptr<Cell> Grid::operator[](uint16_t index)
 {
 	return Get(index);
 }

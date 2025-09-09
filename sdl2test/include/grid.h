@@ -19,8 +19,8 @@ public:
 	
 	void SetCurrent(const std::shared_ptr<Cell> newCurrent);
 
-	std::shared_ptr<Cell>& Get(int16_t index);
-	std::shared_ptr<Cell>& operator[](uint16_t index);
+	std::shared_ptr<Cell> Get(int16_t index);
+	std::shared_ptr<Cell> operator[](uint16_t index);
 	
 	int index(uint32_t x, uint32_t y);
 	std::shared_ptr<Cell> checkNeighbors(const std::shared_ptr<Cell>& cell);
